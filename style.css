@@ -42,8 +42,6 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #ffeed3;
-  border-radius: 25px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -53,6 +51,11 @@ body {
   min-width: 650px;
   position: relative;
   margin-left: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 15px;
 }
 
 .item {
@@ -132,6 +135,7 @@ body {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-right: 15px;
 }
 
 .item .link a {
@@ -151,10 +155,13 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #fff0d7;
-  border-radius: 25px;
   margin-left: 15px;
   margin-right: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
 }
 
 .saved .savedTitle {
@@ -179,10 +186,11 @@ body {
   height: 120px;
   border: 15px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 15px solid #D8FCFC;
-  border-right: 15px solid #C1E0D7;
-  border-right: 15px solid #E0F7EA;
+  border-top: 15px solid #d8fcfc;
+  border-right: 15px solid #c1e0d7;
+  border-right: 15px solid #e0f7ea;
   animation: spin 0.4s linear infinite;
+  margin-bottom: 95px;
 }
 /* Safari */
 @-webkit-keyframes spin {
