@@ -1,0 +1,42 @@
+{
+    "chart":[
+        {
+            "url":"#",
+            "img":"https://static.bhphoto.com/images/images2500x2500/1582674773_1548392.jpg",
+            "name":"Fujifilm XT-4 Camera Body+ Lens",
+            "provider":"Fujifilm Turkey",
+            "status":true,
+            "shipment":true
+        },
+
+        {
+            "url":"#",
+            "img":"https://www.fujifilmshop.com/files/img/428/4329-X100V_black_front.jpg",
+            "name":"Fujifilm X100V Camera Body(Black)",
+            "provider":"Fujifilm Turkey",
+            "status":true,
+            "shipment":true
+        },
+        {
+            "url":"#",
+            "img":"https://www.fujifilmshop.com/files/img/428/3960-x-pro3-db1.jpg",
+            "name":"Fujifilm X-PRO 3 Dura (Black)",
+            "provider":"Fujifilm Turkey",
+            "status":true,
+            "shipment":false
+        }
+    ],
+    "saved":[
+        {
+            "url":"#",
+            "img":"https://www.fujifilmshop.com/files/img/428/3635-XF16mmF2.8-Black-2.jpg",
+            "name":"Fujinon XF16mmF2.8 R WR Siyah Objektif",
+            "provider":"Fujifilm Turkey",
+            "status":true,
+            "shipment":false
+
+        }
+        
+
+    ]
+}
