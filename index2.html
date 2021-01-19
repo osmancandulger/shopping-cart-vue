@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart || First Vue App</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="app1">
-        <p v-if="loading">Loading...</p>
-    <div class="container">
+      <div class="loader-container">
+        <div class="loader" v-if="loading"></div>
+      </div>
+
+      <div class="container" v-if="!loading">
         <h2 v-if="chart.length>1">Your Chart with ({{chart.length}} items)</h2>
         <h2 v-else-if="chart.length==0">Your chart is empty</h2>
         <h2 v-else>Your Chart with ({{chart.length}} item)</h2>
 
         <div class="item" v-for="(i,index) in chart">
-           <a href="#"> <img v-bind:src="i.img" alt="item1"></a>
-       
-        <div class="item-info">
-            
+          <a href="#"> <img v-bind:src="i.img" alt="item1" /></a>
+
+          <div class="item-info">
             <h4>{{i.name}} by {{i.provider}}</h4>
             <p class="status" v-if="i.shipment">Free</p>
             <p class="status1" v-else>Not Free</p>
-                <p class="shipment" v-if="i.shipment"> Avaible</p>
-                <p class="shipment1" v-else>Not Avaible</p>
-                <div class="link">
-                    <a href="#" v-on:click="remove(index)">Delete</a>
-                 <a href="#" class="move-to-saved" v-on:click="move(index)">Move </a>
-                </div>
+            <p class="shipment" v-if="i.shipment">Avaible</p>
+            <p class="shipment1" v-else>Not Avaible</p>
+            <div class="link">
+              <a href="#" v-on:click="remove(index)">Delete</a>
+              <a href="#" class="move-to-saved" v-on:click="move(index)"
+                >Move
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="saved" v-if="!loading">
+        <h2 class="savedTitle" v-if="saved.length>1">
+          Your saved with ({{saved.length}} items)
+        </h2>
+        <h2 class="savedTitle" v-else-if="saved.length==0">
+          Your saved list is empty
+        </h2>
+        <h2 class="savedTitle" v-else>
+          Your saved with ({{saved.length}} item)
+        </h2>
+        <div class="item" v-for="i in saved">
+          <a href="#"> <img v-bind:src="i.img" alt="item1" /></a>
+          <div class="item-info">
+            <h4>{{i.name}} by {{i.provider}}</h4>
+            <p class="status" v-if="i.shipment">Free</p>
+            <p class="status1" v-else>Not Free</p>
+            <p class="shipment" v-if="i.shipment">Avaible</p>
+            <p class="shipment1" v-else>Not Avaible</p>
+            <div class="link">
+              <a href="#" v-on:click="remove1(index)">Delete</a>
+              <a href="#" class="move-to-saved" v-on:click="move1(index)"
+                >Move to Chart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-<div class="saved">
-    <h2  class="savedTitle"v-if="saved.length>1">Your saved with ({{saved.length}} items)</h2>
-    <h2 class="savedTitle" v-else-if="saved.length==0">Your saved list is empty</h2>
-    <h2 class="savedTitle"v-else>Your saved with ({{saved.length}} item)</h2>
-    <div class="item" v-for="i in saved">
-        <a href="#"> <img v-bind:src="i.img" alt="item1"></a>
-     <div class="item-info">
-         <h4>{{i.name}} by {{i.provider}}</h4>
-         <p class="status" v-if="i.shipment">Free</p>
-         <p class="status1" v-else>Not Free</p>
-             <p class="shipment" v-if="i.shipment"> Avaible</p>
-             <p class="shipment1" v-else>Not Avaible</p>
-             <div class="link">
-                <a href="#" v-on:click="remove1(index)">Delete</a>
-                <a href="#" class="move-to-saved" v-on:click="move1(index)">Move to Chart </a>
-             </div>
-     </div>
- </div>
-
-</div>
-    </div>
-    
-</body>
+  </body>
 </html>
