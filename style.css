@@ -172,14 +172,16 @@ body {
   justify-content: center;
   align-items: center;
   top: 45px;
+  height: 100vh;
 }
 .loader {
   width: 120px;
   height: 120px;
   border: 15px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 15px solid #3498db;
-  border-right: 15px solid green;
+  border-top: 15px solid #D8FCFC;
+  border-right: 15px solid #C1E0D7;
+  border-right: 15px solid #E0F7EA;
   animation: spin 0.4s linear infinite;
 }
 /* Safari */
